@@ -48,23 +48,26 @@ Our users will be able to enter details for the animals in the park, their enclo
 
 ## MVP
 
-- Draw an entity relationship diagram to show the structure of the tables and the relationships between them. Each table should have enough columns to capture all the data shown in the JSON above.
-- Set up the tables in a postgres database. You can set them up using the `psql` REPL, a GUI like Postico or PGAdmin or by writing an SQL file like the one in the previous task.
+- Draw an entity relationship diagram to show the structure of the tables and the relationships between them. Each table should have enough columns to capture all the data shown in the JSON above. - DONE
+
+- Set up the tables in a postgres database. You can set them up using the `psql` REPL, a GUI like Postico or PGAdmin or by writing an SQL file like the one in the previous task. - DONE 
+
 - Populate the tables with some of your own data (you don't need to use more cereal mascots, unless you want to). Don't worry about the capacity restriction on enclosures for now, checking the would be handled by the back-end before the data gets sent to the database.
+
 - Write queries to find:
-	- The names of the animals in a given enclosure
-	- The names of the staff working in a given enclosure
+	- The names of the animals in a given enclosure - DONE
+	- The names of the staff working in a given enclosure - DONE
 
 	
 ## Extensions
 
 Write queries to find:
 
-- The names of staff working in enclosures which are closed for maintenance
-- The name of the enclosure where the oldest animal lives. If there are two animals who are the same age choose the first one alphabetically.
-- The number of different animal types a given keeper has been assigned to work with.
-- The number of different keepers who have been assigned to work in a given enclosure
-- The names of the other animals sharing an enclosure with a given animal (eg. find the names of all the animals sharing the big cat field with Tony)
+- The names of staff working in enclosures which are closed for maintenance - DONE
+- The name of the enclosure where the oldest animal lives. If there are two animals who are the same age choose the first one alphabetically. - DONE 
+- The number of different animal types a given keeper has been assigned to work with. - DONE
+- The number of different keepers who have been assigned to work in a given enclosure - DONE
+- The names of the other animals sharing an enclosure with a given animal (eg. find the names of all the animals sharing the big cat field with Tony) - DONE
 
 ## Hints
 
