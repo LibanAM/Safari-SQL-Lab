@@ -55,18 +55,17 @@ INSERT INTO assignment (employeeId, enclosureId, day) VALUES (2, 4, 'Tuesday');
 INSERT INTO assignment (employeeId, enclosureId, day) VALUES (3, 2, 'Friday');
 INSERT INTO assignment (employeeId, enclosureId, day) VALUES (4, 3, 'Thursday');
 
--- SELECT * FROM enclosure;
 
-/*
+-- MVP 1
 SELECT animal.name, enclosure.name FROM animal
 INNER JOIN enclosure
 ON animal.enclosure_id = enclosure.id
 WHERE enclosure.id = 1;
 
-MVP 1
-*/ 
 
-/*
+
+-- MVP 2
+
 SELECT staff.name, enclosure.name, assignment.day FROM staff
 INNER JOIN assignment
 ON staff.id = assignment.employeeId
@@ -74,10 +73,9 @@ INNER JOIN enclosure
 ON enclosure.id = assignment.enclosureId
 WHERE enclosure.id = 3;
 
-MVP 2
-*/
 
-/*
+-- EXTENSION 1 
+
 SELECT staff.name, enclosure.name, assignment.day, enclosure.closedForMaintenance FROM staff
 INNER JOIN assignment
 ON staff.id = assignment.employeeId
@@ -85,19 +83,17 @@ INNER JOIN enclosure
 ON enclosure.id = assignment.enclosureId
 WHERE enclosure.closedForMaintenance = true;
 
-EXTENSION 1 
-*/
 
-/*
+-- EXTENSION 2
+
 SELECT animal.name, animal.type, animal.age, enclosure.name FROM animal
 INNER JOIN enclosure 
 ON animal.enclosure_id = enclosure.id
 ORDER BY animal.age DESC, animal.name;
 
-EXTENSION 2
-*/
 
-/*
+-- EXTENSION 3 
+
 SELECT COUNT(DISTINCT animal.type), assignment.enclosureId, assignment.employeeId FROM animal
 INNER JOIN enclosure
 ON animal.enclosure_id = enclosure.id
@@ -108,11 +104,9 @@ ON staff.id = assignment.employeeId
 WHERE assignment.employeeId = 4
 GROUP BY assignment.enclosureId, assignment.employeeId;
 
-EXTENSION 3 
-* /
 
+-- EXTENSION 4
 
-/*
 SELECT COUNT (DISTINCT staff.name), enclosure.name FROM staff 
 INNER JOIN assignment
 on assignment.employeeId = staff.id
@@ -121,20 +115,16 @@ ON enclosure.id = assignment.enclosureId
 WHERE enclosure.id = 4
 GROUP BY enclosure.name;
 
-EXTENSION 4
-*/
 
 
-/*
+-- EXTENSION 5
+
 SELECT * from enclosure
 INNER JOIN animal
 ON animal.enclosure_id = enclosure.id
 WHERE animal.enclosure_id IN (SELECT animal.enclosure_id 
 FROM animal 
 WHERE animal.name = 'Tony');
-
-EXTENSION 5
-*/
 
 
 
