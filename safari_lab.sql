@@ -65,7 +65,6 @@ WHERE enclosure.id = 1;
 
 
 -- MVP 2
-
 SELECT staff.name, enclosure.name, assignment.day FROM staff
 INNER JOIN assignment
 ON staff.id = assignment.employeeId
@@ -75,7 +74,6 @@ WHERE enclosure.id = 3;
 
 
 -- EXTENSION 1 
-
 SELECT staff.name, enclosure.name, assignment.day, enclosure.closedForMaintenance FROM staff
 INNER JOIN assignment
 ON staff.id = assignment.employeeId
@@ -85,7 +83,6 @@ WHERE enclosure.closedForMaintenance = true;
 
 
 -- EXTENSION 2
-
 SELECT animal.name, animal.type, animal.age, enclosure.name FROM animal
 INNER JOIN enclosure 
 ON animal.enclosure_id = enclosure.id
@@ -93,7 +90,6 @@ ORDER BY animal.age DESC, animal.name;
 
 
 -- EXTENSION 3 
-
 SELECT COUNT(DISTINCT animal.type), assignment.enclosureId, assignment.employeeId FROM animal
 INNER JOIN enclosure
 ON animal.enclosure_id = enclosure.id
@@ -106,7 +102,6 @@ GROUP BY assignment.enclosureId, assignment.employeeId;
 
 
 -- EXTENSION 4
-
 SELECT COUNT (DISTINCT staff.name), enclosure.name FROM staff 
 INNER JOIN assignment
 on assignment.employeeId = staff.id
@@ -118,7 +113,6 @@ GROUP BY enclosure.name;
 
 
 -- EXTENSION 5
-
 SELECT * from enclosure
 INNER JOIN animal
 ON animal.enclosure_id = enclosure.id
